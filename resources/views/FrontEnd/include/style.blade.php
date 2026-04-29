@@ -99,6 +99,18 @@ integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMz1Q1bO6EN4r6KFc2U4eVg0L3qLwY2Zbm2DO
     .navigation-landscape .nav-menu>li>a {
         padding: 15px 14px;
         white-space: nowrap;
+        color: #000;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.2s ease-in-out;
+    }
+    .navigation-landscape .nav-menu>li>a:hover {
+        color: #ef4a23;
+    }
+    .top-action-item:hover h6,
+    .top-action-item:hover small,
+    .top-action-item:hover .icon {
+        color: #ef4a23 !important;
     }
     .nav-menu {
         margin: 0;
