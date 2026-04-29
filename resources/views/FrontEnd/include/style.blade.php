@@ -206,6 +206,18 @@ integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMz1Q1bO6EN4r6KFc2U4eVg0L3qLwY2Zbm2DO
 .third-inner li {
     margin-bottom: 6px;
 }
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1450px !important;
+    }
+}
 </style>
 
 
