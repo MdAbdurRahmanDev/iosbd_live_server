@@ -6,7 +6,7 @@
 {{--    <meta name="author" content="Themezhub" />--}}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{asset(get_setting('site_favicon')->value)}}" type="image/x-icon">
-    <title> {{get_setting('site_name')->value}} | @yield('title') md rahman</title>
+    <title> {{get_setting('site_name')->value}} | @yield('title') </title>
 
     <!-- Custom CSS -->
     <style>

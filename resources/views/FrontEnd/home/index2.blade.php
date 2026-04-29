@@ -240,7 +240,7 @@
 
 
 
-                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
                     <div class="home-slider auto-slider mb-3 mt-3">
 
                         @foreach ($sliders as $slider)
@@ -277,7 +277,7 @@
                     </div>
                 </div>
 
-                <div class="d-none d-lg-block col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="d-none d-lg-block col-xl-4 col-lg-4 col-md-12 col-sm-12">
                     <div class="killore-new-block-link border mb-3 mt-3">
                         <div class="px-3 py-3 ft-medium fs-md text-dark gray">Top Categories</div>
 
