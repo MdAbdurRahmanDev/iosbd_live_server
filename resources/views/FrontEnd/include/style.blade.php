@@ -73,6 +73,36 @@ integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMz1Q1bO6EN4r6KFc2U4eVg0L3qLwY2Zbm2DO
         color: #ffffff;
         text-decoration: none;
     }
+    .headd-sty-wrap {
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .header-search-wrapper {
+        flex: 1 1 50%;
+        min-width: 280px;
+        padding: 0 15px;
+    }
+    .navigation-landscape .nav-menus-wrapper {
+        overflow-x: auto;
+    }
+    .navigation-landscape .nav-menu {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap;
+        width: max-content;
+    }
+    .navigation-landscape .nav-menu>li {
+        float: none !important;
+        display: inline-flex;
+    }
+    .navigation-landscape .nav-menu>li>a {
+        padding: 15px 14px;
+        white-space: nowrap;
+    }
+    .nav-menu {
+        margin: 0;
+    }
     .user-account-desktop {
         display: flex !important;
     }
