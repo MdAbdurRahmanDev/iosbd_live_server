@@ -32,6 +32,47 @@ integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMz1Q1bO6EN4r6KFc2U4eVg0L3qLwY2Zbm2DO
     .header-fixed .headd-sty-wrap {
         padding: 5px 0px !important;
     }
+    .top-header {
+        background: #081f44;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .top-header-search-form .form-control {
+        border-radius: 30px 0 0 30px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        color: #fff;
+        min-height: 44px;
+    }
+    .top-header-search-form .form-control::placeholder {
+        color: rgba(255,255,255,0.7);
+    }
+    .top-header-search-form .input-group-append .btn-search-header {
+        border-radius: 0 30px 30px 0;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: #ffffff;
+        color: #081f44;
+        min-width: 48px;
+    }
+    .top-header-link {
+        color: #ffffff;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 8px 10px;
+    }
+    .top-header-link:hover {
+        color: #c9e3ff;
+    }
+    .btn-pc-builder {
+        background: #00a8ff;
+        color: #fff;
+        border-radius: 30px;
+        padding: 8px 16px;
+        font-weight: 600;
+    }
+    .top-header .text-white a {
+        color: #ffffff;
+        text-decoration: none;
+    }
     .user-account-desktop {
         display: flex !important;
     }

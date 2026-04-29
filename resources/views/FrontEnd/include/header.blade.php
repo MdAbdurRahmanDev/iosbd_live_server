@@ -3,102 +3,35 @@
 <!-- ============================================================== -->
 <!-- Top Header -->
 
-<div class="py-0 py-md-2 br-bottom top-header">
+<div class="py-2 top-header bg-header-primary">
     <div class="container">
-        <div class="row">
-
-        {{--    @if (get_setting('is_free_shipping_available')->value == 1) --}}
-                <!--<div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">-->
-                <div class="col-4 d-flex align-items-center">
-                    <div class="top_second">
-                        <!--<p class="medium text-muted m-0 p-0"><i class="ti-truck mr-1"></i>Get Free delivery from-->
-                        <!--    ৳{{ get_setting('free_shipping_purchase_amount')->value }} <a-->
-                        <!--        href="{{ route('product.show') }}" class="medium text-dark text-underline">Shop Now</a>-->
-                        <!--</p>-->
-                        <p class="medium text-muted m-0 p-0">
-                            <i class="lni lni-phone"></i>
-                            Call Us Now:
-                            <strong class="text-dark fs-sm"><a href="tel:{{get_setting('phone')->value}}">{{get_setting('phone')->value}}</a></strong>
-                        </p>
+        <div class="row align-items-center">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-2 mb-md-0">
+                <div class="d-flex align-items-center">
+                    <i class="lni lni-phone fs-18 text-white mr-2"></i>
+                    <p class="medium text-white m-0">
+                        Call Us Now:
+                        <strong class="text-white"><a href="tel:{{ get_setting('phone')->value }}" class="text-white">{{ get_setting('phone')->value }}</a></strong>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-4 col-md-6 col-sm-12 mb-2 mb-md-0">
+                <form action="{{ route('product.search') }}" method="post" class="top-header-search-form">
+                    @csrf
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search for products..." autocomplete="off" />
+                        <div class="input-group-append">
+                            <button class="btn btn-search-header" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
                     </div>
-                </div>
-        {{--    @endif --}}
-        
-            <div class="col-4">
-                <!--<p class="text-center text-dark p-0 m-0">{{get_setting('business_name')->value}}</p>-->
-                <img src="{{ asset('FrontEnd/company_name.jpg') }}" style="height: 30px">
+                </form>
             </div>
-
-            <!-- Right Menu -->
-            <!--<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">-->
-            <div class="col-4 d-flex align-items-center justify-content-end">
-                <div class="currency-selector dropdown js-dropdown float-right d-none">
-                    <a href="javascript:void(0);" data-toggle="dropdown" class="popup-title" title="Currency"
-                        aria-label="Currency dropdown">
-                        <span class="hidden-xl-down medium text-muted">Currency:</span>
-                        <span class="iso_code medium text-muted">BDT</span>
-                        <i class="fa fa-angle-down medium text-muted"></i>
-                    </a>
-                    <ul class="popup-content dropdown-menu">
-                        <li><a title="Euro" href="#" class="dropdown-item medium text-muted">EUR €</a></li>
-                        <li class="current"><a title="US Dollar" href="#"
-                                class="dropdown-item medium text-muted">USD $</a></li>
-                    </ul>
-                </div>
-
-                <!-- Choose Language -->
-
-                <div class="language-selector-wrapper dropdown js-dropdown float-right mr-3 d-none">
-                    <a class="popup-title" href="javascript:void(0)" data-toggle="dropdown" title="Language"
-                        aria-label="Language dropdown">
-                        <span class="hidden-xl-down medium text-muted">Language:</span>
-                        <span class="iso_code medium text-muted">English</span>
-                        <i class="fa fa-angle-down medium text-muted"></i>
-                    </a>
-                    <ul class="dropdown-menu popup-content link">
-                        <li class="current"><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/1.jpg" alt="en" width="16"
-                                    height="11" /><span>English</span></a></li>
-                        <li><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/2.jpg" alt="fr" width="16"
-                                    height="11" /><span>Français</span></a></li>
-                        <li><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/3.jpg" alt="de" width="16"
-                                    height="11" /><span>Deutsch</span></a></li>
-                        <li><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/4.jpg" alt="it" width="16"
-                                    height="11" /><span>Italiano</span></a></li>
-                        <li><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/5.jpg" alt="es" width="16"
-                                    height="11" /><span>Español</span></a></li>
-                        <li><a href="javascript:void(0);" class="dropdown-item medium text-muted"><img
-                                    src="{{ asset('FrontEnd') }}/assets/img/6.jpg" alt="ar" width="16"
-                                    height="11" /><span>اللغة العربية</span></a></li>
-                    </ul>
-                </div>
-
-                {{-- <div class="currency-selector dropdown js-dropdown float-right mr-3">
-                    @if (Auth::user() && Auth::user()->role == 3)
-                        <a href="{{ route('dashboard') }}"><i class="lni lni-user mr-1"></i>{{ Auth::user()->name }}</a>
-                        <a href="#"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                class="lni lni-exit mr-1"></i>Sign Out</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    @else
-                        <i class="lni lni-user mr-1"></i><a href="{{ route('login') }}">Sign In </a> /<a
-                            href="{{ route('register') }}"> Sign Up</a>
-                    @endif
-                </div> --}}
-
-                <div class="order-selector dropdown js-dropdown float-right mr-3">
-                    <a href="{{ route('order.tracking') }}" class="text-muted medium"><i
-                            class="lni lni-map-marker mr-1"></i>Order Tracking</a>
-                </div>
-
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-wrap align-items-center justify-content-md-end justify-content-start gap-2">
+                <a href="#" class="top-header-link">Offers</a>
+                <a href="#" class="top-header-link">19th Fest</a>
+                <a href="{{ route('login') }}" class="top-header-link">Account</a>
+                <a href="https://www.startech.com.bd/tool/pc_builder" class="btn btn-pc-builder">PC Builder</a>
             </div>
-
         </div>
     </div>
 </div>
